@@ -1,0 +1,235 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: #ddd;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  height: 100vh;
+  flex-direction: column;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 3s;
+}
+
+.logo-animation img {
+  width: 150px;
+  animation: doorOpen 2s ease forwards;
+}
+
+.loading-bar {
+  width: 150px;
+  height: 8px;
+  background: #444;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.loading-bar::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #aaa, #fff);
+  animation: load 3s linear forwards;
+}
+
+@keyframes doorOpen {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes load {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+.main-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: #1a1a1a;
+}
+
+.main-screen h1 {
+  margin-bottom: 10px;
+}
+
+.main-screen .enter {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ddd;
+  color: #111;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background: #222;
+  padding: 10px 0;
+}
+
+.nav-tabs .tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ccc;
+}
+
+.nav-tabs .tab img {
+  width: 24px;
+  margin-bottom: 4px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+canvas.starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #000;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.countdown-box {
+  text-align: center;
+  margin-top: 20px;
+}
+.countdown-box h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+#countdown {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-tabs {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  background: #111;
+  border-top: 1px solid #333;
+}
+
+.nav-tabs .tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  color: #777;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+.nav-tabs .tab.active {
+  color: #fff;
+  font-weight: 700;
+  border-top: 2px solid white;
+}
+
+
+.loading-screen {
+  background: url('logo.png') center center no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 3s;
+}
+.loading-bar {
+  width: 150px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.loading-bar::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, white, #ccc);
+  animation: load 3s linear forwards;
+}
+
+
+canvas.starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+
+canvas#starfield {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: -1000 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  pointer-events: none !important;
+  background: transparent !important;
+}
+
+
+.main-screen canvas.starfield {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: transparent !important;
+}
+
+
+canvas#starfield {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: transparent !important;
+  pointer-events: none;
+}
