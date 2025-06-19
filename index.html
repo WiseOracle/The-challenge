@@ -6,41 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Challenge</title>
   <link rel="stylesheet" href="style.css" />
-  
-  
   <script defer src="starfield.js"></script>
 </head>
 <body>
-  
-  <div class="loading-screen" id="loadingScreen">
+  <canvas class="starfield" id="starfield"></canvas>
+
+  <div class="loading-screen">
     <div class="logo-animation">
-      <img src="logo.png" alt="Mystical Door Logo" class="door-logo" />
+      <img src="logo.png" alt="Mystical Door Logo" />
       <div class="loading-bar"></div>
     </div>
   </div>
 
-  <div class="main-screen hidden" id="mainScreen">
-    <canvas class="starfield" id="starfield"></canvas>
-    
-    <div class="nav-tabs">
-      <div class="tab" id="leaderboard">
-        <img src="icon-leaderboard.svg" alt="Leaderboard" />
-        <span>Leaderboard</span>
-      </div>
-      <div class="tab" id="game">
-        <img src="icon-game.svg" alt="Game" />
-        <span>Game</span>
-      </div>
-      <div class="tab" id="profile">
-        <img src="icon-profile.svg" alt="Profile" />
-        <span>Profile</span>
-      </div>
+  <div class="main-screen">
+    <h1>The Challenge</h1>
+    <div class="countdown-box">
+      <h2>Next Game In</h2>
+      <div id="countdown">00:59</div>
     </div>
-    <div class="content">
-      <h1>The Challenge</h1>
-      <div class="countdown-box"><h2>Next Game In</h2><div id="countdown">00:59</div></div>
-      <button class="enter">Enter the Game</button>
-    </div>
+    <button class="enter">Enter the Game</button>
+  </div>
+
+  <div class="nav-tabs">
+    <div class="tab active" id="game">🎮<br/>Game</div>
+    <div class="tab" id="leaderboard">🏆<br/>Leaderboard</div>
+    <div class="tab" id="profile">👤<br/>Profile</div>
   </div>
 </body>
 </html>

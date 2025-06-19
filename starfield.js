@@ -1,7 +1,6 @@
 
 const canvas = document.getElementById('starfield');
 const ctx = canvas.getContext('2d');
-
 let stars = [];
 
 function initStars() {
@@ -19,18 +18,12 @@ function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   initStars();
-  console.log("Canvas resized:", canvas.width, canvas.height);
 }
 
 function draw() {
-  console.log("Drawing frame... Canvas:", canvas.width, canvas.height);
-
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = 'black';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.fillStyle = 'red'; // red box in center
-  ctx.fillRect(canvas.width / 2 - 25, canvas.height / 2 - 25, 50, 50);
 
   for (let star of stars) {
     star.z -= 2;
@@ -46,7 +39,7 @@ function draw() {
       const size = (1 - star.z / canvas.width) * 2.5;
       ctx.beginPath();
       ctx.arc(px, py, size, 0, Math.PI * 2);
-      ctx.fillStyle = '#FF00FF';
+      ctx.fillStyle = '#FFFFFF';
       ctx.fill();
     }
   }
@@ -57,6 +50,5 @@ function draw() {
 window.addEventListener('load', () => {
   resizeCanvas();
   draw();
-  console.log("Starfield running.");
 });
 window.addEventListener('resize', resizeCanvas);
