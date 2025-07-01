@@ -1,0 +1,1 @@
+const isAdmin = window.Telegram?.WebApp?.initData?.includes('7553084583') || false; console.log('Admin:', isAdmin);
