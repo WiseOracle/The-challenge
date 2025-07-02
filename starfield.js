@@ -1,0 +1,1 @@
+// Continuous galaxy starfield animation logic
