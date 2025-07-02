@@ -1,15 +1,7 @@
-# The Challenge
+# The Challenge (Tailwind Configured)
 
-## Install
+1. Run `npm install`
+2. Run `npm start` to test
+3. Push to GitHub + deploy with Vercel
 
-```bash
-npm install
-npm start
-```
-
-## Features
-
-- Animated loading screen with Logo2
-- Galaxy background using particles.js
-- Logo1 on intro + question screens
-- Basic navigation: Leaderboard, Play, Profile
+Tailwind is fully ready. All styles will now work as expected.
