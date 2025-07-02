@@ -1,8 +1,15 @@
-# The Challenge Final
+# The Challenge
 
-## How to Use
-1. Upload this to GitHub repo connected to Vercel
-2. Run `npm install` to install dependencies
-3. Vercel will auto-deploy
+## Install
 
-Includes: Logo1, Logo2, Particles, Navigation, Loading screen
+```bash
+npm install
+npm start
+```
+
+## Features
+
+- Animated loading screen with Logo2
+- Galaxy background using particles.js
+- Logo1 on intro + question screens
+- Basic navigation: Leaderboard, Play, Profile
