@@ -8,11 +8,17 @@ export default function TelegramChallengeApp() {
   const [eliminated, setEliminated] = useState(false);
 
   useEffect(() => {
+    console.log("Telegram:", window.Telegram);
+
     if (window.Telegram && window.Telegram.WebApp) {
       const webApp = window.Telegram.WebApp;
       webApp.ready();
       setTg(webApp);
-      setUser(webApp.initDataUnsafe.user);
+      setUser(webApp.initDataUnsafe?.user || { first_name: "Tester" });
+    } else {
+      // fallback for browser test
+      setTg(null);
+      setUser({ first_name: "Tester" });
     }
   }, []);
 
@@ -39,7 +45,7 @@ export default function TelegramChallengeApp() {
     setStep("winner");
   };
 
-  if (!tg || !user) return <div>Loading...</div>;
+  if (!user) return <div className="p-4">Loading...</div>;
 
   if (eliminated) return <div className="p-4 text-center">You were eliminated. Try again tomorrow!</div>;
 
