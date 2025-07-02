@@ -1,37 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
     <title>The Challenge</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="starfield.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading The Challenge...</p>
+    </div>
+
     <canvas id="starfield"></canvas>
-    <div class="app">
-        <img src="logo.png" alt="Mystical Door Logo" class="logo" />
-        <nav class="nav">
-            <a href="#"><img src="icon-leaderboard.svg" />Leaderboard</a>
-            <a href="#"><img src="icon-game.svg" />Game</a>
-            <a href="#"><img src="icon-profile.svg" />Profile</a>
-        </nav>
+
+    <div id="main-ui" style="display: none;">
+        <header>
+            <img src="logo.png" alt="Mystical Door Logo" class="logo">
+            <nav>
+                <a href="#"><img src="leaderboard.svg" alt="Leaderboard">Leaderboard</a>
+                <a href="#"><img src="game.svg" alt="Game">Game</a>
+                <a href="#"><img src="profile.svg" alt="Profile">Profile</a>
+            </nav>
+        </header>
+
         <main>
             <h1>The Challenge</h1>
             <h2>Next Game In</h2>
-            <div id="countdown">00:59</div>
+            <p id="countdown">00:59</p>
             <button onclick="enterGame()">Enter the Game</button>
-            <div id="currency-selection" class="hidden">
-                <h3>Select a currency to pay the $0.50 entry</h3>
-                <button>TON</button>
-                <button>USDT</button>
-                <button>BTC</button>
-                <button>ETH</button>
-                <p>Waiting for payment...</p>
-                <p class="paid hidden">✅ Payment received</p>
-            </div>
         </main>
+
+        <div id="payment-modal" class="modal">
+            <h3>Select a currency to pay the $0.50 entry</h3>
+            <div class="currency-options">
+                <button onclick="selectCurrency('TON')">TON</button>
+                <button onclick="selectCurrency('USDT')">USDT</button>
+                <button onclick="selectCurrency('BTC')">BTC</button>
+                <button onclick="selectCurrency('ETH')">ETH</button>
+            </div>
+            <p id="payment-status">Waiting for payment...</p>
+        </div>
     </div>
-    <script src="starfield.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
