@@ -2,47 +2,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>The Challenge</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="starfield.js" defer></script>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Challenge</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script defer src="starfield.js"></script>
 </head>
 <body>
-    <div id="loading-screen">
-        <div class="spinner"></div>
-        <p>Loading The Challenge...</p>
+  <canvas class="starfield" id="starfield"></canvas>
+  <div class="loading-screen" id="loadingScreen">
+    <div class="logo-animation">
+      <img src="logo.png" alt="Mystical Door Logo" class="door-logo" />
+      <div class="loading-bar"></div>
     </div>
+  </div>
 
-    <canvas id="starfield"></canvas>
-
-    <div id="main-ui" style="display: none;">
-        <header>
-            <img src="logo.png" alt="Mystical Door Logo" class="logo">
-            <nav>
-                <a href="#"><img src="leaderboard.svg" alt="Leaderboard">Leaderboard</a>
-                <a href="#"><img src="game.svg" alt="Game">Game</a>
-                <a href="#"><img src="profile.svg" alt="Profile">Profile</a>
-            </nav>
-        </header>
-
-        <main>
-            <h1>The Challenge</h1>
-            <h2>Next Game In</h2>
-            <p id="countdown">00:59</p>
-            <button onclick="enterGame()">Enter the Game</button>
-        </main>
-
-        <div id="payment-modal" class="modal">
-            <h3>Select a currency to pay the $0.50 entry</h3>
-            <div class="currency-options">
-                <button onclick="selectCurrency('TON')">TON</button>
-                <button onclick="selectCurrency('USDT')">USDT</button>
-                <button onclick="selectCurrency('BTC')">BTC</button>
-                <button onclick="selectCurrency('ETH')">ETH</button>
-            </div>
-            <p id="payment-status">Waiting for payment...</p>
-        </div>
+  <div class="main-screen hidden" id="mainScreen">
+    <div class="nav-tabs">
+      <div class="tab" id="leaderboard">
+        <img src="leaderboard.svg" alt="Leaderboard" />
+        <span>Leaderboard</span>
+      </div>
+      <div class="tab" id="game">
+        <img src="game.svg" alt="Game" />
+        <span>Game</span>
+      </div>
+      <div class="tab" id="profile">
+        <img src="profile.svg" alt="Profile" />
+        <span>Profile</span>
+      </div>
     </div>
+    <div class="content">
+      <h1 class="title">The Challenge</h1>
+      <div class="countdown-box">
+        <h2>Next Game In</h2>
+        <div id="countdown">00:59</div>
+      </div>
+      <button class="enter" id="enterGame">Enter the Game</button>
+    </div>
+  </div>
+
+  <div class="payment-screen hidden" id="paymentScreen">
+    <div class="payment-options">
+      <h3>Select Payment Currency</h3>
+      <button class="currency">TON</button>
+      <button class="currency">USDT</button>
+      <button class="currency">BTC</button>
+      <button class="currency">ETH</button>
+    </div>
+    <div class="payment-loading hidden">
+      <p>Waiting for payment...</p>
+      <div class="spinner"></div>
+    </div>
+    <div class="payment-success hidden">
+      <p>✅ Payment received!</p>
+    </div>
+  </div>
 </body>
 </html>
