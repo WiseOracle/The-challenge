@@ -1,1 +1,1 @@
-// Continuous galaxy starfield effect
+// Starfield animation logic

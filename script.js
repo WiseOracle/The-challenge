@@ -1,1 +1,1 @@
-// JS to handle navigation, countdown, and wallet connect simulation
+// JS for handling page logic, countdown, game entry, and transitions
