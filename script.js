@@ -1,1 +1,1 @@
-// JS for handling page logic, countdown, game entry, and transitions
+console.log('App script loaded');
