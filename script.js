@@ -1,1 +1,1 @@
-document.addEventListener('DOMContentLoaded', () => { console.log('App loaded'); });
+// JS for handling countdown, game entry, and wallet UI
