@@ -1,8 +1,8 @@
-# The Challenge - Telegram Mini App
+# The Challenge Final
 
 ## How to Use
+1. Upload this to GitHub repo connected to Vercel
+2. Run `npm install` to install dependencies
+3. Vercel will auto-deploy
 
-1. Upload this folder to a GitHub repository
-2. Connect the repo to Vercel.com
-3. Vercel will auto-deploy your site
-4. Use the deployed link inside your Telegram bot with a WebApp button
+Includes: Logo1, Logo2, Particles, Navigation, Loading screen
