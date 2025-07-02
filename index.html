@@ -1,1 +1,40 @@
-<!-- HTML for v14 with payment and loading logic -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Challenge</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="loading-screen" id="loadingScreen">
+    <div class="logo-animation">
+      <img src="logo.png" alt="Mystical Door Logo" class="door-logo" />
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+
+  <div class="main-screen hidden" id="mainScreen">
+    <div class="nav-tabs">
+      <div class="tab" id="leaderboard">
+        <span>🏆</span>
+      </div>
+      <div class="tab" id="game">
+        <span>🎮</span>
+      </div>
+      <div class="tab" id="profile">
+        <span>👤</span>
+      </div>
+    </div>
+    <div class="content">
+      <h1>The Challenge</h1>
+      <div class="countdown-box">
+        <h2>Next Game In</h2>
+        <div id="countdown">00:59</div>
+      </div>
+      <button class="enter">Enter the Game</button>
+    </div>
+  </div>
+</body>
+</html>
